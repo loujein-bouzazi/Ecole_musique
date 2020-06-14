@@ -1,0 +1,95 @@
+*utilisateur :
+id int pk
+nom text
+prenom text
+email text
+telephone text
+mdp text ( a chiffrer  md5)
+role (enseignant/etudiant) int
+
+
+*cours 
+id int pk
+titre text
+description text
+niveau(debutant/intermediaire/avance/expert) int
+id_enseignant int fk
+
+section_cours
+id int pk
+id_cours fk
+titre text
+contenu text+image ( created by wysiwyg )
+
+
+section_cours_id_etudiant
+id_etudiant int fk
+id_section_cours int fk
+accomplie true/false
+
+*evaluation
+id int pk
+id_cours int fk 
+id_evaluateur int fk
+note int
+commentaire text
+
+
+
+
+systeme authentification php
+role based access
+forum
+evaluation des cours systeme etoile + modal afficher les commentaire
+
+
+liste des cours pour chaque etudiant 
+accueil des etudiants :
+zone de recherche dans mes cours / tous les cours : id, nom, niveau, genre, instrument
+liste de mes cours affichés par le plus récemment visité / tous les cours trié par nom
+datatable jquery
+
+continuer un cours
+afficher les section du cours + fenetre de contenu qui contient cliquer sur une section pour accomplir/revisiter
+
+
+
+évaluer un cours si on y est inscrit
+ajouter une note sur 5 et un commentaire optionnel
+
+voir mes demandes d'inscrit en cours
+annuler 
+
+
+dashboard accessible à tous
+
+accueil d'un enseignant:
+mes cours zone de recherche 
+datatables
+bouton ajouter un cours
+formulaire + ajout des sections 
+valider
+
+voir les demandes d'inscription
+valider 
+
+
+page d'accueil background changing images
+top navbar dashboard home
+assistant IA avec BOTMAN
+
+
+
+------------------------------------------
+create_cours
+register
+database.php
+index
+liste_cours
+crud
+server
+ajouterconge
+cours
+errors
+connect
+login
